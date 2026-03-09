@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  background: #07060e;
+  color: #e2e8f0;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+/* ── Animated mesh gradient background ─────────────────────────── */
+.bg-mesh {
+  background-color: #07060e;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 15% 10%, rgba(139, 92, 246, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 85% 80%, rgba(6, 182, 212, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 50% 50%, rgba(236, 72, 153, 0.08) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+/* ── Glassmorphism card ──────────────────────────────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* ── Column scrollable area ─────────────────────────────────────── */
+.column-tasks {
+  overflow-y: auto;
+  max-height: calc(100vh - 280px);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.1) transparent;
+  padding-right: 2px;
+}
+
+.column-tasks::-webkit-scrollbar {
+  width: 4px;
+}
+.column-tasks::-webkit-scrollbar-track {
+  background: transparent;
+}
+.column-tasks::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 2px;
+}
+
+/* ── Gradient text utility ──────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glow effects ───────────────────────────────────────────────── */
+.glow-violet {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.25), 0 0 40px rgba(139, 92, 246, 0.1);
+}
+.glow-rose {
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.25), 0 0 40px rgba(236, 72, 153, 0.1);
+}
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.25), 0 0 40px rgba(6, 182, 212, 0.1);
+}
